@@ -83,12 +83,13 @@ public class BinaryTreeBuilder {
         BinaryTreeBuilder builder = new BinaryTreeBuilder();
 
         // Example input: [1, 2, null, 3]
-        Integer[] arr = {5,4,8,11,null,13,4,7,2,null,null,null,1};
+        Integer[] arr = {1,7,0,7,-8,null,null};
 
         TreeNode root = builder.buildTree(arr);
 
         // Print the constructed tree
-        builder.printTree(root);
+        MaxLevelSum maxLevelSum = new MaxLevelSum();
+        System.out.println(maxLevelSum.maxLevelSum(root));
 //        PathSum pathSum = new PathSum();
 //        System.out.println(pathSum.hasPathSum(root, 21));
         
