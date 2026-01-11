@@ -13,16 +13,23 @@ import com.string.IsSubsequence;
 import com.string.LengthOfLastWord;
 import com.string.ScoreOfString;
 import com.twopointer.IsPalindrome;
+import com.twopointer.Merge;
 
 public class Main {
 	
 
 	public static void main(String[] args) {
-		FindClosestElements findClosestElements = new FindClosestElements();
-		int [][] res = {{1,2,3},{-1,-2,-3},{1,2,3}};
-		System.out.println(findClosestElements.findClosestElements(new int[] {-3,-2,1,2,3,4,5},6, 3));
+		Merge merge = new Merge();
+		int[] nums1 = {1,2,4,0,0};
+		int[] nums2 = {2,3};
+		int m = 3;
+		int n = 2;
+		merge.merge(nums1, m, nums2, n);
+		for(int x:nums1) {
+			System.out.println(x);
+		}
 		
-		
+		System.out.println();
 		
 //		
 //		for(int x:res)
