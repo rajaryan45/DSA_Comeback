@@ -1,12 +1,21 @@
 package com.array;
 
+import java.util.Deque;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 import com.binarysearch.SeparateSquares;
 import com.dp.NumOfWays;
+import com.hashing.MaximizeSquareArea;
+import com.linkedlistprac.AddTwoNumbers;
 import com.linkedlistprac.LinkedListBuilder;
 import com.linkedlistprac.ListNode;
+import com.linkedlistprac.MergeInBetween;
+import com.linkedlistprac.MergeNodes;
+import com.linkedlistprac.MergeTwoLists;
+import com.linkedlistprac.RemoveElements;
+import com.linkedlistprac.RemoveNthFromEnd;
 import com.linkedlistprac.ReverseList;
 import com.matrix.MaxMatrixSum;
 import com.slidingwindow.CharacterReplacement;
@@ -34,13 +43,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		LinkedListBuilder linkedListBuilder = new LinkedListBuilder();
-		ListNode headListNode = linkedListBuilder.listBuilder(new int[] {1,2,3,4,5});
-		ReverseList reverseList = new ReverseList();
-		headListNode = reverseList.reverseList(headListNode);
-		while(headListNode!=null) {
-			System.out.print(headListNode.val + " ");
-			headListNode = headListNode.next;
+		ListNode list1 = linkedListBuilder.listBuilder(new int[] {0,3,1,0,4,5,2,0});
+		ListNode list2 = linkedListBuilder.listBuilder(new int[] {1000000,1000001,1000002});
+		MergeNodes mergeNodes = new MergeNodes();
+		list1 = mergeNodes.mergeNodes(list1);
+		System.out.println("output: ");
+		while(list1!=null) {
+			System.out.print(list1.val + " ");
+			list1 = list1.next;
 		}
+		
+		
+		
+//		MaximizeSquareArea maximizeSquareArea = new MaximizeSquareArea();
+//		System.out.println(maximizeSquareArea.maximizeSquareArea(4, 3, new int[] {2,3}, new int[] {2}));
 			
 			
 		System.out.println();
