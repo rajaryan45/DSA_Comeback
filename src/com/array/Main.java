@@ -8,6 +8,8 @@ import java.util.List;
 import com.binarysearch.SeparateSquares;
 import com.dp.NumOfWays;
 import com.hashing.MaximizeSquareArea;
+import com.heap.KClosest;
+import com.heap.LastStoneWeight;
 import com.linkedlistprac.AddTwoNumbers;
 import com.linkedlistprac.LinkedListBuilder;
 import com.linkedlistprac.ListNode;
@@ -20,9 +22,12 @@ import com.linkedlistprac.ReverseList;
 import com.matrix.MaxMatrixSum;
 import com.slidingwindow.CharacterReplacement;
 import com.slidingwindow.CheckInclusion;
+import com.slidingwindow.EqualSubstring;
 import com.slidingwindow.FindClosestElements;
 import com.slidingwindow.LongestOnes;
 import com.slidingwindow.MaxSlidingWindow;
+import com.slidingwindow.MaxVowels;
+import com.slidingwindow.MinOperations;
 import com.slidingwindow.MinSubArrayLen;
 import com.slidingwindow.MinWindow;
 import com.slidingwindow.MinimumRecolors;
@@ -42,17 +47,23 @@ import com.twopointer.ValidPalindromeII;
 public class Main {
 
 	public static void main(String[] args) {
-		LinkedListBuilder linkedListBuilder = new LinkedListBuilder();
-		ListNode list1 = linkedListBuilder.listBuilder(new int[] {0,3,1,0,4,5,2,0});
-		ListNode list2 = linkedListBuilder.listBuilder(new int[] {1000000,1000001,1000002});
-		MergeNodes mergeNodes = new MergeNodes();
-		list1 = mergeNodes.mergeNodes(list1);
-		System.out.println("output: ");
-		while(list1!=null) {
-			System.out.print(list1.val + " ");
-			list1 = list1.next;
-		}
+//		LinkedListBuilder linkedListBuilder = new LinkedListBuilder();
+//		ListNode list1 = linkedListBuilder.listBuilder(new int[] {0,3,1,0,4,5,2,0});
+//		ListNode list2 = linkedListBuilder.listBuilder(new int[] {1000000,1000001,1000002});
+//		MergeNodes mergeNodes = new MergeNodes();
+//		list1 = mergeNodes.mergeNodes(list1);
+//		System.out.println("output: ");
+//		while(list1!=null) {
+//			System.out.print(list1.val + " ");
+//			list1 = list1.next;
+//		}
 		
+		KClosest kClosest = new KClosest();
+		int[][] res = kClosest.kClosest(new int[][] {{3,3},{5,-1},{-2,4}}, 2);
+		for(int[] x : res) {
+			System.out.println(x[0] + " " + x[1]);
+		}
+		System.out.println();
 		
 		
 //		MaximizeSquareArea maximizeSquareArea = new MaximizeSquareArea();
