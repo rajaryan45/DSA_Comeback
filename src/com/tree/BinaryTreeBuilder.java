@@ -83,15 +83,15 @@ public class BinaryTreeBuilder {
         BinaryTreeBuilder builder = new BinaryTreeBuilder();
 
         // Example input: [1, 2, null, 3]
-        Integer[] arr = {3,5,1,6,2,0,8,null,null,7,4};
-
+        Integer[] arr = {1,2,3,4,null,null,null,5};
+        
         TreeNode root = builder.buildTree(arr);
-
+        builder.printTree(root);
+        System.out.println(" ");
         // Print the constructed tree
-        LowestCommonAncestor lowestCommonAncestor = new LowestCommonAncestor();
-        System.out.println(root.left.val);
-        System.out.println(root.left.right.val);
-        System.out.println(lowestCommonAncestor.lowestCommonAncestor(root,root.left ,root.left.right ).val);
+        RightSideView rightSideView = new RightSideView();
+        System.out.println(rightSideView.rightSideView(root));
+        builder.printTree(root);
 //        PathSum pathSum = new PathSum();
 //        System.out.println(pathSum.hasPathSum(root, 21));
         
