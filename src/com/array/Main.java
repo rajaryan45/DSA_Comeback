@@ -8,6 +8,7 @@ import java.util.List;
 import com.binarysearch.SeparateSquares;
 import com.dp.NumOfWays;
 import com.hashing.MaximizeSquareArea;
+import com.heap.FindLeastNumOfUniqueInts;
 import com.heap.KClosest;
 import com.heap.LastStoneWeight;
 import com.linkedlistprac.AddTwoNumbers;
@@ -58,12 +59,8 @@ public class Main {
 //			list1 = list1.next;
 //		}
 		
-		KClosest kClosest = new KClosest();
-		int[][] res = kClosest.kClosest(new int[][] {{3,3},{5,-1},{-2,4}}, 2);
-		for(int[] x : res) {
-			System.out.println(x[0] + " " + x[1]);
-		}
-		System.out.println();
+		FindLeastNumOfUniqueInts findLeastNumOfUniqueInts = new FindLeastNumOfUniqueInts();
+		System.out.println(findLeastNumOfUniqueInts.findLeastNumOfUniqueInts(new int[] {5,5,4}, 1));
 		
 		
 //		MaximizeSquareArea maximizeSquareArea = new MaximizeSquareArea();
